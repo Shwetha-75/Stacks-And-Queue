@@ -1,17 +1,17 @@
-<h3 align='center'>Concept - Next Generation Element</h3>
+# Concept - Next Generation Element 
 
 
-# Intuition
+**Intuition**
 <!-- Describe your first thoughts on how to solve this problem. -->
 Find the permutation of a given number and the smallest among all will be the next greater number of **n**
-# Approach
+**Approach**
 <!-- Describe your approach to solving the problem. -->
 **Brute Force Approach :**
 
 Find the permutation of a given number and sort it.
 Finally check for the number which is just greater than n and within 2**31, if found return number or else return -1
 
-# Complexity
+**Complexity**
 - Time complexity:
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
 $$O(N!)$$
@@ -22,7 +22,7 @@ $$O(N!)$$
 ---
 
 
-# Approach
+**Approach**
 
 **Find next greater permutation :** 
 
@@ -37,7 +37,7 @@ $$O(N!)$$
 
 
 
-# Complexity
+**Complexity**
 - Time complexity:
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
 $$ O(D)$$
@@ -48,6 +48,70 @@ $$ O(D)$$
 where D is number of digits
 
 ---
-<h3 align='center'>Trapping Water</h3>
+# Trapping Water
 
-<a href='https://leetcode.com/problems/trapping-rain-water/solutions/6974433/two-pointers-approach-by-shwetha_k-dvb8' target='_blank'>Reference</a>
+**Intuition**
+Total number of units water filled between the buildings
+
+total=total+min(left_max,right_max)-arr[i]   
+
+**Approach**
+
+Brute Force :
+
+Initialize the total=0
+For each index starting from 1 until n-1 (inclusively)
+left_max from i-1 until 0
+right_max from i+1 until n-1
+Add with total (Keep note negative values if there exist do not consider)
+return total
+**Complexity**
+
+Time complexity:
+O(N^2)
+
+Space complexity:
+O(1)
+
+
+
+**Approach**
+Prefix and Suffix sum Approach. Here we can just consider the suffix max array leaving prefix max because we are traversing from left to right
+
+Suffix Max :
+
+<img src='https://assets.leetcode.com/users/images/24940e28-9b87-46ae-93dc-ed904584e26f_1752846075.296077.png' />
+<img src='https://assets.leetcode.com/users/images/55b1a58e-ff8a-4ff9-ab85-a9bcfdc53cea_1752846084.6826568.png' />
+<img src='https://assets.leetcode.com/users/images/8e413c7b-37f3-40a9-97af-e034df92c833_1752846089.1883512.png' />
+<img src='https://assets.leetcode.com/users/images/08cce4f5-f02d-4da5-861c-f327bf4e18fb_1752846094.2049174.png' />
+<img src='[https://assets.leetcode.com/users/images/e8bceda9-d81b-4494-a55a-f41f2a2d98e5_1752846099.8652275.png' />
+
+**Complexity**
+
+Time complexity:
+O(N)
+
+Space complexity:
+O(N)
+
+**Approach**
+Two pointers approach
+
+<img src='https://assets.leetcode.com/users/images/0d9f2725-74ad-4c86-9c05-a9bf3f558b78_1752845211.9903376.png' />
+<img src='https://assets.leetcode.com/users/images/928f13ad-a63f-4b8d-94b8-cf57a1e24f37_1752845226.112784.png' />
+<img src='https://assets.leetcode.com/users/images/55d1c94b-c553-480c-b5b8-a6fb8d80b8bd_1752845231.9661117.png' />
+<img src='https://assets.leetcode.com/users/images/f70e4ba1-3ffa-4894-9bcd-5296710b84f9_1752845236.8348687.png' />
+<img src='https://assets.leetcode.com/users/images/462de70b-2af4-448f-a326-8b0ac2955dbf_1752845242.7939358.png' />
+<img src='https://assets.leetcode.com/users/images/a315a458-c8e7-40b9-b07a-e474158095e8_1752845247.0111835.png' />
+<img src='https://assets.leetcode.com/users/images/f3301635-117c-45db-ad86-0de5aa13cadd_1752845252.4319925.png' />
+<img src='https://assets.leetcode.com/users/images/8e9fd3b5-279c-4498-b8b2-b9a8cfb3314c_1752845256.6722639.png' />
+
+**Complexity**
+Time complexity:
+O(N)
+
+Space complexity:
+O(1)
+
+
+
