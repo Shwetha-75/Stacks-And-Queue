@@ -1,3 +1,6 @@
+<h3 align='center'>Concept - Next Generation Element</h3>
+
+
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
 Find the permutation of a given number and the smallest among all will be the next greater number of **n**
@@ -15,34 +18,6 @@ $$O(N!)$$
 - Space complexity:
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 $$O(N!)$$
-
-# Code
-
-```
-class Solution:
-    def __init__(self):
-        self.array=set()
-    def nextGreaterElement(self, n: int) -> int:
-        number=list(str(n))
-        self.helper(0,number)
-        array:list[int]=list(self.array)
-        array.sort()
-        total=2**31
-        for num in array:
-            if num>n and num<total:
-                return num 
-        return -1
-                
-    def helper(self,index,number:list[str]):
-        if index==len(number):
-            self.array.add(int("".join(number[::])))
-            return 
-        for i in range(index,len(number)):
-            number[index],number[i]=number[i],number[index]
-            self.helper(index+1,number)
-            number[index],number[i]=number[i],number[index]
-
-```
 
 ---
 
@@ -72,46 +47,7 @@ $$ O(D)$$
 
 where D is number of digits
 
-# Code
-```python3 []
-class Solution:
-    def nextGreaterElement(self, n: int) -> int:
+---
+<h3 align='center'>Trapping Water</h3>
 
-        #   find the next lexicographically greater element 
-        if n>2**31:
-            return -1
-        result,temp=[],n 
-        while temp:
-              result.append(temp%10)
-              temp//=10
-        result.reverse()
-        res=self.helper(result)
-        return -1 if res<=n or res>=2**31 else res      
- 
-    
-    def helper(self,nums:list[int])->int:
-        pivot,n=-1,len(nums)
-        for i in range(n-2,-1,-1):
-            if nums[i]<nums[i+1]:
-                pivot=i
-                break 
-        if pivot==-1:
-            nums.reverse()
-        else:
-        #    swap with next greater element 
-            for i in range(n-1,pivot,-1):
-                 if nums[i]>nums[pivot]:
-                     nums[i],nums[pivot]=nums[pivot],nums[i]
-                     break 
-            #  reverse 
-            right,left=n-1,pivot+1
-            while left<right:
-                  nums[left],nums[right]=nums[right],nums[left]
-                  left+=1
-                  right-=1
-        number=pow=0
-        for num in nums:
-            number=number*10+num 
-            pow+=1
-        return number
-```
+<a href='https://leetcode.com/problems/trapping-rain-water/solutions/6974433/two-pointers-approach-by-shwetha_k-dvb8' target='_blank'>Reference</a>
