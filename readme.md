@@ -58,13 +58,32 @@ total=total+min(left_max,right_max)-arr[i]
 **Approach**
 
 Brute Force :
-
-Initialize the total=0
+<ol>
+  
+<li>
+  Initialize the total=0
+</li>
+<li>
 For each index starting from 1 until n-1 (inclusively)
+  
+</li>
+<li>
 left_max from i-1 until 0
+  
+</li>
+<li>
 right_max from i+1 until n-1
+  
+</li>
+<li>
 Add with total (Keep note negative values if there exist do not consider)
+  
+</li>
+<li>
 return total
+  
+</li>
+</ol>
 **Complexity**
 
 Time complexity:
