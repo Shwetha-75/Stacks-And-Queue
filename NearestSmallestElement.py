@@ -1,5 +1,7 @@
 '''
-Given an array arr[] of integers, for each element in the array, find the nearest smaller element on its left. If there is no such smaller element, return -1 for that position.
+Given an array arr[] of integers, for each element in the array, 
+find the nearest smaller element on its left. If there is no such smaller element,
+return -1 for that position.
 
 Input: arr[] = [1, 6, 2]
 Output: [-1, 1, 1]
